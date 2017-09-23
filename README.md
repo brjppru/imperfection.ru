@@ -1,4 +1,4 @@
-# brjppru.github.io
+# imperfection.ru
 
-brj startup page for internet
+my imperfection, the brj startup page for internet
 
