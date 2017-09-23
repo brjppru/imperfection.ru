@@ -4,6 +4,12 @@
 
 dated=`date +%Y-%m-%d-%H%M%S`
 
+# regen 404
+cat assets/404/404.html > 404.html
+cat index.html >> 404.html
+
+# git add
+
 git add .
 echo run git push on ${dated}
 
