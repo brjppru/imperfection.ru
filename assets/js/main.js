@@ -1,7 +1,7 @@
 /*
-	Strata by Pixelarity
-	pixelarity.com @pixelarity
-	License: pixelarity.com/license
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
@@ -28,7 +28,9 @@
 
 		var $window = $(window),
 			$body = $('body'),
-			$header = $('#header');
+			$header = $('#header'),
+			$footer = $('#footer'),
+			$main = $('#main');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -61,6 +63,15 @@
 				);
 			});
 
+		// Footer.
+			skel.on('+medium', function() {
+				$footer.insertAfter($main);
+			});
+
+			skel.on('-medium !medium', function() {
+				$footer.appendTo($header);
+			});
+
 		// Header.
 
 			// Parallax background.
@@ -90,6 +101,10 @@
 
 						}
 
+					});
+
+					$window.on('load', function() {
+						$window.triggerHandler('scroll');
 					});
 
 				}
